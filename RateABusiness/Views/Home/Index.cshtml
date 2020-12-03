@@ -1,0 +1,66 @@
+﻿@model IEnumerable<RateABusiness.ViewModel.BusinessViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table style="width: 100%; border: 1px solid black">
+    <thead>
+        <tr>
+            <th>
+                Business ID
+            </th>
+            <th>
+                Business Name
+            </th>
+            <th>
+                Business Address
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                Zip Code
+            </th>
+            <th>
+                Business Type
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @item.BusinessId
+    </td>
+    <td>
+        @item.Name
+    </td>
+    <td>
+        @item.Address
+    </td>
+    <td>
+        @item.City
+    </td>
+    <td>
+        @item.State
+    </td>
+    <td>
+        @item.State
+    </td>
+    <td>
+        @item.Type
+    </td>
+    <td>
+        @Html.ActionLink("Add/View Review", "ShowReview", new { BusinessId = item.BusinessId })
+    </td>
+</tr>
+    }
+</table>

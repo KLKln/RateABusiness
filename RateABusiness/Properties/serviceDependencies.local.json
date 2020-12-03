@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/RateABusinessvault",
+      "type": "secrets.keyVault",
+      "connectionId": "RateABusinessVaultUri",
+      "secretStore": null
+    },
+    "secrets2": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/demoklein/databases/RatingsAppKlein",
+      "type": "mssql.azure",
+      "connectionId": "RatingsAppKlein",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
