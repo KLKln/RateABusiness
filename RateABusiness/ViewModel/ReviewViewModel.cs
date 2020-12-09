@@ -9,6 +9,8 @@ namespace RateABusiness.ViewModel
     {
         public int ReviewId { get; set; }
 
+        public string BusinessName { get; set; }
+
         public int BusinessId { get; set; }
 
         public string Comment { get; set; }
