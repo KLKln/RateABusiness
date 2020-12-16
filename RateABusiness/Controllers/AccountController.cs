@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RateABusiness.ViewModel;
-using RateABusiness.Models;
+using RateABusiness.DBModels;
 using System.Data.Entity.Infrastructure;
 
 namespace RateABusiness.Controllers

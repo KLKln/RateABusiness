@@ -1,4 +1,4 @@
-﻿using RateABusiness.Models;
+﻿using RateABusiness.DBModels;
 using RateABusiness.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -56,12 +56,13 @@ namespace RateABusiness.Controllers
 
         public ActionResult AddComment(int businessId, int rating, string reviewComment)
         {
-            Review objReview = new Review();
-            objReview.BusinessId = businessId;
-            objReview.Comment = reviewComment;
-            objReview.ReviewDate = DateTime.Now;
-            objReview.Rating = rating;
-            //objReview.GuestId = Guid.NewGuid();
+            Review objReview = new Review
+            {
+                BusinessId = businessId,
+                Comment = reviewComment,
+                ReviewDate = DateTime.Now,
+                Rating = rating
+            };
             objRatingsAppKleinEntities3.Reviews.Add(objReview);
             objRatingsAppKleinEntities3.SaveChanges();
 
