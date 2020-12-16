@@ -31,13 +31,13 @@ namespace RateABusiness.Controllers
             if(ModelState.IsValid)
             {
                 Guest objGuest = new Guest()
-                {
+                
+                {                    
                     Email = objUserModel.Email,
                     Password = objUserModel.Password
                 };
             
-                objRatingsAppKleinEntities4.Guests.Add(objGuest);
-                objGuest.GuestId++;
+                objRatingsAppKleinEntities4.Guests.Add(objGuest);                
                 objRatingsAppKleinEntities4.SaveChanges();
                 objUserModel.AccountCreationMessage = "User Created Successfully";
                 return View("Register");
