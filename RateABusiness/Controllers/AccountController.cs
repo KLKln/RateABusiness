@@ -37,8 +37,8 @@ namespace RateABusiness.Controllers
                     Password = objUserModel.Password
                 };
             
-                objRatingsAppKleinEntities4.Guests.Add(objGuest);               
-                objRatingsAppKleinEntities4.SaveChanges();
+                objRatingsAppKleinEntities4.Guests.Add(objGuest);
+                _ = objRatingsAppKleinEntities4.SaveChanges();
                 objUserModel.AccountCreationMessage = "User Created Successfully";
                 return RedirectToAction("Index", "Home");
             }
