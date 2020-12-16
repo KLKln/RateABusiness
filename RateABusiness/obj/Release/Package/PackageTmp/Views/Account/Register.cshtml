@@ -1,15 +1,15 @@
-﻿@model RateABusiness.ViewModel.LoginModel
+﻿@model RateABusiness.ViewModel.UserModel
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Register";
 }
 
-<h2>Login</h2>
+<h2>Register</h2>
 
 <fieldset>
     <legend>
-        User Login
+        User Registration
     </legend>
-    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    @using(Html.BeginForm("Register", "Account", FormMethod.Post))
     {
 <table>
     <tr>
@@ -21,8 +21,7 @@
         </td>
     </tr>
     <tr>
-        <td>
-        </td>
+        <td></td>
         <td>
             @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text text-danger" })
         </td>
@@ -36,18 +35,34 @@
         </td>
     </tr>
     <tr>
-        <td>
-        </td>
+        <td></td>
         <td>
             @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })
         </td>
     </tr>
     <tr>
         <td>
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </td>
+        <td>
+            @Html.PasswordFor(model => model.ConfirmPassword)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+        </td>
+        <td>
             <table>
                 <tr>
                     <td>
-                        <input type="submit" value="Login" />
+                        <input type="submit" value="Register" />
                     </td>
                     <td>
                         <input type="reset" value="Reset" />
@@ -57,10 +72,11 @@
         </td>
     </tr>
     <tr>
-        <td>
-            @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
+        <td colspan="2">
+            @Html.ValidationMessageFor(model => model.AccountCreationMessage, null, new { @class = "alert alert-success"})
         </td>
     </tr>
 </table>
     }
 </fieldset>
+

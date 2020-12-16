@@ -27,7 +27,7 @@ namespace RateABusiness.Controllers
                                                                            Address = objBusiness.Address,
                                                                            City = objBusiness.City,
                                                                            State = objBusiness.State,
-                                                                           //Zip = objBusiness.Zip,
+                                                                           Zip = (int)objBusiness.Zip,
                                                                            Type = objBusiness.Type
 
 

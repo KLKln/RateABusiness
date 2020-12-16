@@ -203,3 +203,5 @@ C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.xml
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.Security.xml
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\obj\Release\RateABusiness.Properties.Resources.resources
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\obj\Release\RateABusiness.csproj.GenerateResource.cache

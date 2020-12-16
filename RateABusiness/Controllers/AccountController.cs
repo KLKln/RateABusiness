@@ -37,10 +37,10 @@ namespace RateABusiness.Controllers
                     Password = objUserModel.Password
                 };
             
-                objRatingsAppKleinEntities4.Guests.Add(objGuest);                
+                objRatingsAppKleinEntities4.Guests.Add(objGuest);               
                 objRatingsAppKleinEntities4.SaveChanges();
                 objUserModel.AccountCreationMessage = "User Created Successfully";
-                return View("Register");
+                return RedirectToAction("Index", "Home");
             }
             return View();
 
@@ -65,10 +65,16 @@ namespace RateABusiness.Controllers
                 else
                 {
                     Session["Email"] = objLoginModel.Email;
-                    RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
