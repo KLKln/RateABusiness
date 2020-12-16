@@ -1,56 +1,52 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using RateABusiness.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using RateABusiness.ViewModel;
+using RateABusiness.Models;
+using System.Data.Entity.Infrastructure;
 
 namespace RateABusiness.Controllers
 {
-
     public class AccountController : Controller
     {
-        private readonly SignInManager<IdentityUser> signInManager;
 
-        public AccountController(SignInManager<IdentityUser> signInManager)
+        RatingsAppKleinEntities4 objRatingsAppKleinEntities4 = new RatingsAppKleinEntities4();
+        // GET: Account
+        public ActionResult Index()
         {
-            this.signInManager = signInManager;
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            UserModel objUserModel = new UserModel();        
+            return View(objUserModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Logout()
+        public ActionResult Register(UserModel objUserModel)
         {
-            await signInManager.SignOutAsync();
-            return (IActionResult)RedirectToAction("index", "home");
-        }
-
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return (IActionResult)View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
-        {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
-                var result = await signInManager.PasswordSignInAsync(
-                    model.Email, model.Password, model.RememberMe, false);
-
-                if (result.Succeeded)
+                Guest objGuest = new Guest
                 {
-                    return (IActionResult)RedirectToAction("index", "home");
-                }
-
-                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                    Email = objUserModel.Email,
+                    Password = objUserModel.Password
+                };
+                objRatingsAppKleinEntities4.Guests.Add(objGuest);
+                objRatingsAppKleinEntities4.SaveChanges();
+                objUserModel.AccountCreationMessage = "User Created Successfully";
+                return View("Register");
             }
+            return View();
 
-            return (IActionResult)View(model);
+        }
+
+        public ActionResult Login()
+        {
+            return View();
         }
     }
 }
