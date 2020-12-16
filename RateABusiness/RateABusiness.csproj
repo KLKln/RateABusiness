@@ -377,6 +377,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\BusinessViewModel.cs" />
+    <Compile Include="ViewModel\LoginModel.cs" />
     <Compile Include="ViewModel\ReviewViewModel.cs" />
     <Compile Include="ViewModel\UserModel.cs" />
   </ItemGroup>

@@ -30,12 +30,14 @@ namespace RateABusiness.Controllers
         {
             if(ModelState.IsValid)
             {
-                Guest objGuest = new Guest
+                Guest objGuest = new Guest()
                 {
                     Email = objUserModel.Email,
                     Password = objUserModel.Password
                 };
+            
                 objRatingsAppKleinEntities4.Guests.Add(objGuest);
+                objGuest.GuestId++;
                 objRatingsAppKleinEntities4.SaveChanges();
                 objUserModel.AccountCreationMessage = "User Created Successfully";
                 return View("Register");
@@ -46,6 +48,26 @@ namespace RateABusiness.Controllers
 
         public ActionResult Login()
         {
+            LoginModel objLoginModel = new LoginModel();
+            return View(objLoginModel);
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginModel objLoginModel)
+        {
+            if (ModelState.IsValid)
+            {
+                if (objRatingsAppKleinEntities4.Guests.Where(m => m.Email == objLoginModel.Email && m.Password == objLoginModel.Password).FirstOrDefault() == null)
+                {
+                    ModelState.AddModelError("Error", "Email and/or Password are not correct");
+                    return View();
+                }
+                else
+                {
+                    Session["Email"] = objLoginModel.Email;
+                    RedirectToAction("Index", "Home");
+                }
+            }
             return View();
         }
     }
