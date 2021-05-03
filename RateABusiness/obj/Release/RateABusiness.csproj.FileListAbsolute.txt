@@ -205,3 +205,17 @@ C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.Secur
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\obj\Release\RateABusiness.Properties.Resources.resources
 C:\Users\burnt\source\repos\RateABusiness\RateABusiness\obj\Release\RateABusiness.csproj.GenerateResource.cache
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Bcl.HashCode.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.EntityFrameworkCore.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\System.Collections.Immutable.dll
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Bcl.HashCode.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.EntityFrameworkCore.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\burnt\source\repos\RateABusiness\RateABusiness\bin\System.Collections.Immutable.xml

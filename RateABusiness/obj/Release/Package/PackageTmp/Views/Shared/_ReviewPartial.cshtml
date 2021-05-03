@@ -19,11 +19,11 @@
     <tr>
         <td>
             @Model.Rating
-            @for (int i = 1; i < Model.Rating; i++)
+            @for (int i = 1; i <= Model.Rating; i++)
             {
                 <span class="glyphicon glyphicon-star"></span>
             }
-            @for (int i = @Model.Rating; i < 10; i++)
+            @for (int i = @Model.Rating; i <= 10; i++)
             {
                 <span class="glyphicon glyphicon-star-empty"></span>
             }
